@@ -4,10 +4,12 @@ platform :ios, '9.0'
 
 target 'LKNetwork_Example' do
   pod 'LKNetwork', :path => '../'
-
+  pod 'YTKNetwork'
+  pod 'AFNetworking', '~> 4.0'
+  pod 'MJExtension'
   target 'LKNetwork_Tests' do
     inherit! :search_paths
-
+    
     pod 'FBSnapshotTestCase'
   end
 end
