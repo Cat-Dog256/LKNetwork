@@ -1,0 +1,57 @@
+PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - LKNetwork (0.1.0):
+    - AFNetworking
+    - MJExtension
+    - YTKNetwork
+  - MJExtension (3.2.2)
+  - YTKNetwork (3.0.4):
+    - AFNetworking/NSURLSession (~> 4.0)
+
+DEPENDENCIES:
+  - AFNetworking (~> 4.0)
+  - FBSnapshotTestCase
+  - LKNetwork (from `../`)
+  - MJExtension
+  - YTKNetwork
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - FBSnapshotTestCase
+    - MJExtension
+    - YTKNetwork
+
+EXTERNAL SOURCES:
+  LKNetwork:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  LKNetwork: 6d443894fbde217519ca67504edc7098a124f8be
+  MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
+  YTKNetwork: a096f80c18c7e7cc0e623a0fbea0a1bfd3f5bcf2
+
+PODFILE CHECKSUM: 70cd5a6f0811cb1aee086463138b92cb05a15bbb
+
+COCOAPODS: 1.9.1
