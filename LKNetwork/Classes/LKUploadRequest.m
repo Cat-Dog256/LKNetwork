@@ -31,8 +31,8 @@
 - (AFConstructingBlock)constructingBodyBlock {
     return ^(id<AFMultipartFormData> formData) {
         // 将多张图片一次性上传到后台，后台将数据一对应Array格式取出
-        for (NSInteger i = 0; i < _images.count; i++) {
-            UIImage *image = _images[i];
+        for (NSInteger i = 0; i < self->_images.count; i++) {
+            UIImage *image = self->_images[i];
             NSData *imageData = UIImageJPEGRepresentation(image, 0.5);
             // 在网络开发中，上传文件时，是文件不允许被覆盖，文件重名
             // 要解决此问题，

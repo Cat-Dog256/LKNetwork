@@ -17,13 +17,23 @@ NSMutableDictionary const *_lk_sharedInstances = nil;
     _token = model.TOKEN;
     NSString *file = [NSTemporaryDirectory() stringByAppendingPathComponent:@"user.data"];
     // Encoding
-    [[NSKeyedArchiver archivedDataWithRootObject:model requiringSecureCoding:YES error:nil]writeToFile:file atomically:YES];
+    if (@available(iOS 11.0, *)) {
+        [[NSKeyedArchiver archivedDataWithRootObject:model requiringSecureCoding:YES error:nil]writeToFile:file atomically:YES];
+    } else {
+        // Fallback on earlier versions
+        [NSKeyedArchiver archiveRootObject:model toFile:file];
+    }
 }
 - (LKUserModel *)readUserInfo{
     NSString *file = [NSTemporaryDirectory() stringByAppendingPathComponent:@"user.data"];
     // Decoding
-    LKUserModel *user = [NSKeyedUnarchiver unarchivedObjectOfClass:[LKUserModel class] fromData:[NSData dataWithContentsOfFile:file] error:nil];
-    return user;
+    if (@available(iOS 11.0, *)) {
+        LKUserModel *user = [NSKeyedUnarchiver unarchivedObjectOfClass:[LKUserModel class] fromData:[NSData dataWithContentsOfFile:file] error:nil];
+        return user;
+    } else {
+        // Fallback on earlier versions
+        return [NSKeyedUnarchiver unarchiveObjectWithFile:file];
+    }
 }
 - (BOOL)isLonined{
     LKUserModel * userinfo = [self readUserInfo];
@@ -49,9 +59,6 @@ NSMutableDictionary const *_lk_sharedInstances = nil;
     return [self sharedInstance];
 }
 
-+ (id)copyWithZone:(NSZone *)zone {
-    return [self sharedInstance];
-}
 
 #pragma mark -
 

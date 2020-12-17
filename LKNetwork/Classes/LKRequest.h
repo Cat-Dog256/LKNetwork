@@ -20,10 +20,8 @@ typedef enum : NSUInteger {
 - (instancetype)init NS_UNAVAILABLE;
 + (instancetype)new NS_UNAVAILABLE;
 
-/// 请求成功返回的数据
-@property (nonatomic, strong, readonly) LKResponse *successResult;
-/// 请求错误返回的数据
-@property (nonatomic, strong, readonly) LKResponse *errorResult;
+/// 请求返回的数据Model
+@property (nonatomic, strong, readonly) LKResponse *resResult;
 
 /// 服务器地址，默认 SERVICE_36547
 @property (nonatomic, assign) SERVICE_ADDRESS_TYPE service_url;

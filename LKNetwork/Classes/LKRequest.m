@@ -105,13 +105,10 @@
 }
 
 
-- (LKResponse *)successResult{
-    return [LKResponse mj_objectWithKeyValues:[self responseJSONObject]];
-}
-- (LKResponse *)errorResult{
-    NSDictionary *error = [self.responseString mj_JSONObject];
-    if (error) {
-        return [LKResponse mj_objectWithKeyValues:error];
+- (LKResponse *)resResult{
+    LKResponse *res = [LKResponse mj_objectWithKeyValues:[self responseJSONObject]];
+    if (res) {
+        return res;
     }else{
         LKResponse *res = [[LKResponse alloc]init];
         res.errorType = @"本地错误";
@@ -126,9 +123,9 @@
 }
 ///处理被踢下线，重新登陆
 - (void)requestFailedFilter{
-    if ([self errorResult].success == NO && self.responseStatusCode == 301) {
-        NSLog(@"%@",[self errorResult].message);
-        NSLog(@"%@",[self errorResult].msg);
+    if ([self resResult].success == NO && self.responseStatusCode == 301) {
+        NSLog(@"%@",[self resResult].message);
+        NSLog(@"%@",[self resResult].msg);
         NSLog(@"被踢下线，重新登陆");
     }
 }

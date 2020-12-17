@@ -20,12 +20,12 @@
 #endif
 #endif
 
-#import "LKChainRequest.h"
-#import "LKRequest.h"
-#import "LKResponse.h"
-#import "LKUploadRequest.h"
-#import "LKUserInfoManager.h"
-#import "LKUserModel.h"
+#import <LKNetwork/LKChainRequest.h>
+#import <LKNetwork/LKRequest.h>
+#import <LKNetwork/LKResponse.h>
+#import <LKNetwork/LKUploadRequest.h>
+#import <LKNetwork/LKUserInfoManager.h>
+#import <LKNetwork/LKUserModel.h>
 
 FOUNDATION_EXPORT double LKNetworkVersionNumber;
 FOUNDATION_EXPORT const unsigned char LKNetworkVersionString[];
