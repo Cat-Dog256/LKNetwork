@@ -19,20 +19,17 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - LKNetwork (0.1.0):
+  - LKNetwork (0.1.3):
     - AFNetworking
-    - MJExtension
+    - MJExtension (= 3.2.2)
     - YTKNetwork
   - MJExtension (3.2.2)
-  - YTKNetwork (3.0.4):
+  - YTKNetwork (3.0.6):
     - AFNetworking/NSURLSession (~> 4.0)
 
 DEPENDENCIES:
-  - AFNetworking (~> 4.0)
   - FBSnapshotTestCase
   - LKNetwork (from `../`)
-  - MJExtension
-  - YTKNetwork
 
 SPEC REPOS:
   trunk:
@@ -48,10 +45,10 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  LKNetwork: 6d443894fbde217519ca67504edc7098a124f8be
+  LKNetwork: 3d644027105a8f9ed6e0e082016f9e616c1e7057
   MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
-  YTKNetwork: a096f80c18c7e7cc0e623a0fbea0a1bfd3f5bcf2
+  YTKNetwork: c16be90b06be003de9e9cd0d3b187cc8eaf35c04
 
-PODFILE CHECKSUM: 70cd5a6f0811cb1aee086463138b92cb05a15bbb
+PODFILE CHECKSUM: 8055ad1b21572d5531e10f0f28abdf7cfef6b4c8
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.11.3

@@ -40,5 +40,5 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'UIKit', 'MapKit'
    s.dependency 'AFNetworking'
    s.dependency 'YTKNetwork'
-   s.dependency 'MJExtension'
+   s.dependency 'MJExtension','3.2.2'
 end
